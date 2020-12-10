@@ -1,0 +1,8 @@
+type Todo
+  @model(subscriptions: null)
+  @auth(rules: [{allow: groups, groupsField: "tenant"}]) {
+  id: ID!
+  tenant: ID!
+  name: String!
+  description: String
+}
